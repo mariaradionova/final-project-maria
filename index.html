@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brick Tower Game</title>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+
+  <body class="game">
+    <header
+      class="game__header"
+      data-hx-get="partials/game.header.partial.html"
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+    ></header>
+
+    <main class="game__main">
+      <section
+        data-hx-get="partials/game.ui.partial.html"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+      ></section>
+
+      <section
+        data-hx-get="partials/game.screen.partial.html"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+      ></section>
+    </main>
+
+    <script src="js/game.js"></script>
+  </body>
+</html>
